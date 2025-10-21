@@ -12,11 +12,11 @@
 
 ---
 
-## 🌍 World's First & Most Affordable Custom LLM – Built by a Teen
+## Custom LLM – Built by a Teen
 ---
-### **Artha-1** is the **world's first Liquid Neural Network-powered language model pipeline** trained and deployed end-to-end by an independent teen researcher. Unlike traditional LLMs that require millions of dollars, proprietary infrastructure, and industrial compute clusters, **Artha-1 was built in under 3 days using accessible tools and mid-range hardware.**
+### **Artha-1** is the **first Liquid Neural Network-powered language model pipeline** trained and deployed end-to-end by an independent teen researcher. Unlike traditional LLMs that require millions of dollars, proprietary infrastructure, and industrial compute clusters, **Artha-1 was built in under 3 days using accessible tools and mid-range hardware.**
 ---
-### 💡 What Makes It a World First?
+### 💡 What Makes It a First?
 
 - 🧠 **LNN-Based Reasoning Core:**  
   This is the **first open-source LLM** to integrate a **Liquid Neural Network (LNN)** core for deep, dynamic reasoning inside compressed latent space.
