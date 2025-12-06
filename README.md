@@ -1,35 +1,33 @@
 
-# **Artha-1**: A Compact Liquid-Autoencoder Language Model
+# Artha-1: A Compact Liquid-Autoencoder Language Model
 
-**Huggingface**: [`vyomie/artha-1`](https://huggingface.co/vyomie/artha-1)  
+**Repository**: [`vyomie/artha-1`](https://huggingface.co/vyomie/artha-1)  
 **Model Type**: Hybrid LLM with Liquid Neural Network Core  
 **Architecture**: Custom Autoencoder + Liquid Neural Network  
 **Model Size**: ~400M parameters  
 **Format**: PyTorch `.pth` + Python plug-and-play pipeline  
 **Usage**: Plug-and-play via `from model import Pipeline`
 
-[![Watch the video](https://d11a6trkgmumsb.cloudfront.net/original/4X/f/d/d/fddca474f1cf42bdf1c516a8f2e317eadfa7817f.jpeg)](https://youtu.be/aLDtFw47XXA)
 
----
 
-## Custom LLM – Built by a Teen
+## Affordable Custom LLM
 ---
-### **Artha-1** is the **first Liquid Neural Network-powered language model pipeline** trained and deployed end-to-end by an independent teen researcher. Unlike traditional LLMs that require millions of dollars, proprietary infrastructure, and industrial compute clusters, **Artha-1 was built in under 3 days using accessible tools and mid-range hardware.**
+**Artha-1** is a Liquid Neural Network-powered language model pipeline** trained and deployed end-to-end by an independent teen researcher. Unlike traditional LLMs that require millions of dollars, proprietary infrastructure, and industrial compute clusters, **Artha-1 was trained in under 3 days using accessible datasets and mid-range hardware.**
 ---
-### 💡 What Makes It a First?
+### What Makes It the most efficient?
 
-- 🧠 **LNN-Based Reasoning Core:**  
+- **LNN-Based Reasoning Core:**  
   This is the **first open-source LLM** to integrate a **Liquid Neural Network (LNN)** core for deep, dynamic reasoning inside compressed latent space.
 
-- 💸 **Built With ~Zero Budget:**  
+- **Built With ~Zero Budget:**  
   Trained using just local GPUs and open datasets, **no enterprise backing or funding** was involved. This makes Artha-1 arguably the **cheapest working LLM** architecture available to the public.
 
-- 🧑‍🎓 **Created by a Teen Researcher:**  
+- **Created by a Teen Researcher:**  
   From architecture design and training to deployment and packaging, every step was executed by an **independent teen developer**, proving that **you don’t need a PhD or billion-dollar lab** to innovate in AI.
 
 ---
 
-## 📌 Summary
+## Summary
 
 **Artha-1** is a compact and efficient language model designed with an unconventional architecture combining a pretrained autoencoder with a Liquid Neural Network (LNN) core. The model emphasizes interpretability, small footprint, and ease of use for experimentation and lightweight reasoning tasks.
 Built with simplicity and modularity in mind, Artha-1 is ideal for research, tinkering, or educational use, and runs efficiently on consumer-grade hardware.
@@ -39,7 +37,7 @@ Built with simplicity and modularity in mind, Artha-1 is ideal for research, tin
 
 ---
 
-## 🧪 Architecture
+## Architecture
 
 - **Encoder**: Bottleneck-T5 autoencoder (`thesephist/contra-bottleneck-t5-base-wikipedia`)
 - **Core Processor**: Liquid Neural Network (LNN) with dynamic temporal memory
@@ -48,7 +46,7 @@ Built with simplicity and modularity in mind, Artha-1 is ideal for research, tin
 
 ---
 
-## 🧠 Intended Use
+## Intended Use
 
 - Lightweight reasoning tasks  
 - Prompt-based experimentation  
@@ -62,7 +60,7 @@ Built with simplicity and modularity in mind, Artha-1 is ideal for research, tin
 - Not optimized for factual correctness or robustness  
 - Not meant to replace larger foundational models (GPT, LLaMA, Claude, etc.)  
 
-## 📦 Model Architecture
+## Model Architecture
 
 This model is a two-part system:
 - A **Bottleneck T5 autoencoder** for text-to-latent and latent-to-text conversion, adapted from [`thesephist/contra-bottleneck-t5-base-wikipedia`](https://huggingface.co/thesephist/contra-bottleneck-t5-base-wikipedia)
@@ -70,7 +68,7 @@ This model is a two-part system:
 
 The LNN consists of multiple gated recurrent layers designed for temporal and structural memory propagation, allowing for highly expressive representations at low parameter count.
 
-## 📊 Training Details
+## Training Details
 
 - **Training Data:** Synthetic question-answer dataset generated using open-source LLMs  
 - **Latent Size:** 768  
@@ -79,7 +77,24 @@ The LNN consists of multiple gated recurrent layers designed for temporal and st
 - **Optimizer:** AdamW with SWA (Stochastic Weight Averaging)  
 - **Loss Function:** Cosine similarity between predicted and true bottleneck embeddings  
 
-## 🛠️ How to Use
+## How to Use
+Install dependancies
+```bash
+pip install arthaLM
+```
+Initializing Pipeline
+```bash
+from arthaLM import Pipeline
+
+pipe = Pipeline(model_name="vyomie/artha-1")
+```
+Prompting
+```bash
+print(pipe("Hello, how are you!"))
+```
+
+(OR)
+
 
 Make sure you have the following dependencies installed:
 
