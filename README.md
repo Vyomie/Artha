@@ -1,4 +1,4 @@
-
+![Artha-1 Architecture](banner.png)
 # Artha-1: A Compact Liquid-Autoencoder Language Model
 
 **Repository**: [`vyomie/artha-1`](https://huggingface.co/vyomie/artha-1)  
